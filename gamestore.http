@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:5237
+@id = fbef7b9a-ed3a-4c4f-afe1-631fe8cf1b1c
+
+### Get all games
+GET {{baseUrl}}/games/
+
+### Get game by ID
+GET {{baseUrl}}/games/{{id}}
+
+### Create new game
+POST {{baseUrl}}/games
+Content-Type: application/json
+
+{
+    "name": "Game user created",
+    "genreId": "04075994-F276-4F05-B979-BE9E1D79F979",
+    "price": 1000.00
+}
+
+### Update game
+PUT {{baseUrl}}/games/{{id}}
+Content-Type: application/json
+
+{
+    "name": "Game 1 Updated",
+    "genreId": "D9CCA864-5103-4142-8041-08C1FCA7B822",
+    "price": 100.00
+}
+
+### Delete game
+DELETE {{baseUrl}}/games/{{id}}
